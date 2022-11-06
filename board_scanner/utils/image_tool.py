@@ -37,6 +37,7 @@ def color_count(img: np.ndarray, color_range: dict, draw_mask: bool):
         color_num: 对应范围颜色像素个数
         return color_num,color_num/total_num: 对应范围颜色像素占比
     """
+    # TODO: 改用 opencv 自带的函数实现该模块（这个函数太慢了）
     color_num = 0
     total_num = img.size  # 图片像素总数
     if draw_mask:
@@ -52,9 +53,27 @@ def color_count(img: np.ndarray, color_range: dict, draw_mask: bool):
                     mask[i][j] = 1
 
     if draw_mask:
-        draw_img(mask,mode='gray')
+        draw_img(mask, mode='gray')
     return color_num, color_num / total_num
 
 
+def color_judge(img: np.ndarray, hsv_range):
+    """使用hsv判断色块颜色
+
+    Args:
+        img:图像矩阵
+        hsv_range:颜色的hsv范围
+    """
+    hsv_img = cv.cvtColor(img, cv.COLOR_BGR2HSV)
+    inRange_hsv = cv.inRange(hsv_img, hsv_range['lower'], hsv_range['upper'])//255
+    # draw_img(inRange_hsv,'gray')
+    return inRange_hsv.sum()/img.size
+
+
 if __name__ == '__main__':
-    pass
+    img_path = "../../archive/image/white_block1.jpg"
+    img = cv.imread(img_path)  # matrix(img) size:Width*Height*Dim ,[0,255]
+    black_hsv = {'lower':np.array([0,0,0]),'upper':np.array([180,255,46])}
+    white_hsv = {'lower':np.array([0,0,221]),'upper':np.array([180,30,255])}
+    rate = color_judge(img,white_hsv)
+    print(rate)

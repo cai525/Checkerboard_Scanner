@@ -1,4 +1,7 @@
+*.so
 .idea/
-*.jpg
-*.png
+.ipynb_checkpoints/
 notes/
+temp/
+__pycache__/
+
