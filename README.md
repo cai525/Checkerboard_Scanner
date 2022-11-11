@@ -13,25 +13,19 @@
  
 ## 2. 算法介绍
  <br/>
- 
 <img src='archive/illustration/2-1.jpg' width=1000>
- <br/>
  <br/>
  <br/>
 <img src='archive/illustration/2-2.jpg' width=1000>
 <br/>
 <br/>
-<br/>
 <img src='archive/illustration/2-3.jpg' width=1000>
-<br/>
 <br/>
 <br/>
 <img src='archive/illustration/2-4.jpg' width=1000>
 <br/>
-<br/>
 <br/> 
 <img src='archive/illustration/2-5.jpg' width=1000>
-<br/>
 <br/>
 <br/> 
 
