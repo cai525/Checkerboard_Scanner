@@ -12,7 +12,8 @@
  <br/>
  
 ## 2. 算法介绍
-  
+ <br/>
+ 
 <img src='archive/illustration/2-1.jpg' width=1000>
  <br/>
  <br/>
@@ -32,7 +33,8 @@
 <img src='archive/illustration/2-5.jpg' width=1000>
 <br/>
 <br/>
-<br/>   
+<br/> 
+
 > 参考：
 >
 > [colingogogo/gobang_AI: 基于博弈树α-β剪枝搜索的五子棋AI (github.com)](https://github.com/colingogogo/gobang_AI#gobang_ai)
